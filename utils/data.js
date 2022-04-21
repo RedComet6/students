@@ -21,7 +21,25 @@ const users = [
     },
 ];
 
-// const thoughts = ["The Thing is the best movie", "Meshuggah is the best band", "Gyros are the best food", "Lou Malnati's is the best deep dish"];
+const thoughts = [
+    { thoughtText: "The Thing is my favorite movie", username: "achamberlain" },
+    {
+        thoughtText: "I often confuse Kevin Bacon with Dennis Leary",
+        username: "mgriffin",
+    },
+    {
+        thoughtText: "I like mongoDB better than MySQL",
+        username: "mpalmer",
+    },
+    {
+        thoughtText: "David Blaine does the best street magic",
+        username: "scernera",
+    },
+    {
+        thoughtText: "Criss Angel wishes he were David Blaine",
+        username: "jmilner",
+    },
+];
 
 // Get a random item given an array
 // const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -43,4 +61,4 @@ const users = [
 
 // Export the functions for use in seed.js
 // module.exports = { getRandomName, getRandomAssignments };
-module.exports = { users };
+module.exports = { users, thoughts };

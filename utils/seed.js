@@ -1,8 +1,8 @@
 const connection = require("../config/connection");
 // const { Course, Student, User } = require("../models");
-const { User } = require("../models");
+const { User, Thought } = require("../models");
 // const { getRandomName, getRandomAssignments } = require("./data");
-const { users } = require("./data");
+const { users, thoughts } = require("./data");
 
 connection.on("error", (err) => err);
 
@@ -15,6 +15,7 @@ connection.once("open", async () => {
     // Drop existing students
     // await Student.deleteMany({});
 
+    await Thought.deleteMany({});
     await User.deleteMany({});
 
     // Create empty array to hold the students
@@ -42,6 +43,7 @@ connection.once("open", async () => {
 
     // Add students to the collection and await the results
     // await Student.collection.insertMany(students);
+    await Thought.collection.insertMany(thoughts);
     await User.collection.insertMany(users);
 
     // Add courses to the collection and await the results
@@ -52,6 +54,7 @@ connection.once("open", async () => {
     // });
 
     // Log out the seed data to indicate what should appear in the database
+    console.table(thoughts);
     console.table(users);
     console.info("Seeding successful!");
     process.exit(0);
