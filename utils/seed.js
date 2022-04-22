@@ -1,7 +1,6 @@
 const connection = require("../config/connection");
 // const { Course, Student, User } = require("../models");
 const { User, Thought } = require("../models");
-// const { getRandomName, getRandomAssignments } = require("./data");
 const { users, thoughts } = require("./data");
 
 connection.on("error", (err) => err);
@@ -38,7 +37,10 @@ connection.once("open", async () => {
 
     // populate collections
     await Thought.collection.insertMany(thoughts);
+    // Thought.find().populate({ path: reactions, reactions: getRandomArrItem(reactions) });
     await User.collection.insertMany(users);
+    User.find().populate("thoughts", "_id");
+    User.find().populate("friends", "_id");
 
     // Add courses to the collection and await the results
     // await Course.collection.insertOne({
