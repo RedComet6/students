@@ -9,12 +9,7 @@ connection.on("error", (err) => err);
 connection.once("open", async () => {
     console.log("connected");
 
-    // Drop existing courses
-    // await Course.deleteMany({});
-
-    // Drop existing students
-    // await Student.deleteMany({});
-
+    // drop existing collections
     await Thought.deleteMany({});
     await User.deleteMany({});
 
@@ -41,8 +36,7 @@ connection.once("open", async () => {
     //     });
     // }
 
-    // Add students to the collection and await the results
-    // await Student.collection.insertMany(students);
+    // populate collections
     await Thought.collection.insertMany(thoughts);
     await User.collection.insertMany(users);
 
