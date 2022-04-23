@@ -31,10 +31,9 @@ module.exports = {
     createThought(req, res) {
         Thought.create({ thoughtText: req.body.thoughtText, username: req.body.username })
             .then((thought) => {
-                console.log(thought._id.toString());
-                User.findOneAndUpdate({ _id: req.body.userId }, { $addToSet: { thoughts: { _id: thought._id } } }, { runValidators: true, new: true });
-                res.json(thought);
+                return User.findOneAndUpdate({ _id: req.body.userId }, { $addToSet: { thoughts: thought._id } }, { new: true });
             })
+            .then((user) => res.json(user))
             .catch((err) => res.status(500).json(err));
     },
     // Update a user
