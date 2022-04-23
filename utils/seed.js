@@ -35,12 +35,21 @@ connection.once("open", async () => {
     //     });
     // }
 
-    // populate collections
+    // // populate collections
     await Thought.collection.insertMany(thoughts);
-    // Thought.find().populate({ path: reactions, reactions: getRandomArrItem(reactions) });
+    // // Thought.find().populate({ path: reactions, reactions: getRandomArrItem(reactions) });
     await User.collection.insertMany(users);
-    User.find().populate("thoughts", "_id");
-    User.find().populate("friends", "_id");
+    // User.find().populate("thoughts", "_id");
+    // User.find().populate("friends", "_id");
+
+    // populate collections
+    // await Thought.collection.insertMany(thoughts);
+    // // Thought.find().populate({ path: reactions, reactions: getRandomArrItem(reactions) });
+    // const usersCreated = await User.collection.insertMany(users);
+
+    // usersCreated.forEach(user => {
+    //     await Thought.collection.create(thoughts);
+    // })
 
     // Add courses to the collection and await the results
     // await Course.collection.insertOne({
