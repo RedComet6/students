@@ -63,26 +63,30 @@ const reactions = [
 ];
 
 const thoughts = [
-    { thoughtText: "The Thing is my favorite movie", username: "achamberlain", reactions: [getRandomArrItem(reactions)] },
+    {
+        thoughtText: "The Thing is my favorite movie",
+        username: "achamberlain",
+        // reactions: [getRandomArrItem(reactions)]
+    },
     {
         thoughtText: "I often confuse Kevin Bacon with Dennis Leary",
         username: "mgriffin",
-        reactions: [getRandomArrItem(reactions)],
+        // reactions: [getRandomArrItem(reactions)],
     },
     {
         thoughtText: "I like mongoDB better than MySQL",
         username: "mpalmer",
-        reactions: [getRandomArrItem(reactions)],
+        // reactions: [getRandomArrItem(reactions)],
     },
     {
         thoughtText: "David Blaine does the best street magic",
         username: "scernera",
-        reactions: [getRandomArrItem(reactions)],
+        // reactions: [getRandomArrItem(reactions)],
     },
     {
         thoughtText: "Criss Angel wishes he were David Blaine",
         username: "jmilner",
-        reactions: [getRandomArrItem(reactions)],
+        // reactions: [getRandomArrItem(reactions)],
     },
 ];
 
