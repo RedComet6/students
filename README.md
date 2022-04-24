@@ -33,7 +33,7 @@ If you wish to contribute to my content, please contact me at achamberlain.dev@g
 
 ## Links to Application
 
--   Here is a link to the walkthrough video: [https://chamberlain-blog-site.herokuapp.com/](https://chamberlain-blog-site.herokuapp.com/)
+-   Here is a link to the walkthrough video: [https://drive.google.com/file/d/1veM29Xn7lmnf8chnFY2IN_hcuNZFKQCe/view?usp=sharing](https://drive.google.com/file/d/1veM29Xn7lmnf8chnFY2IN_hcuNZFKQCe/view?usp=sharing)
 -   Here is the repo: [https://github.com/RedComet6/yakker](https://github.com/RedComet6/yakker)
 
 ## Questions
